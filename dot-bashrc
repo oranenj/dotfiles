@@ -1,0 +1,19 @@
+export LC_ALL=en_GB.UTF-8
+alias azureus_sudo="sudo java -jar /Applications/Azureus.app/Contents/Resources/Java/Azureus2.jar --ui=console"
+alias silence="diskutil eject /dev/disk0"
+alias ihme.org="ssh choubaka@ihme.org"
+alias proffa="ssh assari.cc.tut.fi"
+alias jolt="ssh jolt.modeemi.cs.tut.fi"
+alias ls="ls -w"
+alias ll="ls -l"
+alias adom="ssh chousuke@adomserver.ath.cx"
+alias adom-spectate="ssh spectator@adomserver.ath.cx"
+alias crawl="ssh joshua@crawl.akrasiac.org"
+export NETHACKOPTIONS=color
+alias clean="rm -f *~ *#"
+
+export EDITOR=vim
+
+pman() {
+man -t "${1}" | ps2pdf - - | open -f -a /Applications/Preview.app/
+}
