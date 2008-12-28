@@ -12,6 +12,7 @@
  '(current-language-environment "UTF-8")
  '(display-time-mode t)
  '(emulate-mac-finnish-keyboard-mode t)
+ '(indent-tabs-mode nil)
  '(inhibit-startup-screen t)
  '(initial-major-mode (lambda nil (funcall (quote text-mode)) (set-viper-state-in-major-mode)))
  '(menu-bar-mode t)
@@ -28,7 +29,7 @@
   ;; If you edit it by hand, you could mess it up, so be careful.
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
- '(default ((t (:foreground "wheat" :background "black"))))
+ '(default ((t (:stipple nil :background "black" :foreground "wheat" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 150 :width normal :family "apple-monaco"))))
  '(flyspell-duplicate ((t (:foreground "Gold3" :underline t :weight normal))))
  '(flyspell-incorrect ((t (:foreground "OrangeRed" :underline t :weight normal))))
  '(font-lock-comment-face ((t (:foreground "SteelBlue1"))))
@@ -86,9 +87,5 @@ point."
 
 (add-hook 'clojure-mode-hook    'my-tab-fix)
 (add-hook 'clojure-mode-hook    'viper-mode)
-
-;(add-hook 'clojure-mode-hook 
-;	  '(lambda ()
-;	     (define-key clojure-mode-map "C-c\C-e" 'lisp-eval-last-sexp)))
 
 
