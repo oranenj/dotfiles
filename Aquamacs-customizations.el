@@ -10,6 +10,7 @@
  '(aquamacs-additional-fontsets nil t)
  '(aquamacs-customization-version-id 151 t)
  '(current-language-environment "UTF-8")
+ '(default-frame-alist (quote ((menu-bar-lines . 1) (font . "fontset-monaco12") (foreground-color . "wheat") (background-color . "black") (cursor-type . box) (cursor-color . "Red") (vertical-scroll-bars . right) (tool-bar-lines . 1) (left-fringe . 1) (right-fringe) (fringe))))
  '(display-time-mode t)
  '(emulate-mac-finnish-keyboard-mode t)
  '(indent-tabs-mode nil)
@@ -20,8 +21,10 @@
  '(special-display-function (quote special-display-popup-frame))
  '(swank-clojure-extra-vm-args (list "-server"))
  '(swank-clojure-jar-path "/Users/oranenj/opt/lisp/clojure/clojure.jar")
+ '(text-mode-hook nil)
  '(tool-bar-mode t)
  '(transient-mark-mode t)
+ '(viper-mode t)
  '(viper-shift-width 4))
 
 (custom-set-faces
@@ -41,19 +44,16 @@
  '(mode-line ((t (:foreground "black" :background "light slate gray"))))
  '(tool-bar ((((type x w32 mac) (class color)) (:background "midnight blue" :foreground "wheat" :box (:line-width 1 :style released-button))))))
 
+(require 'viper)                   ; load Viper
+(require 'vimpulse)                ; load Vimpulse
+(require 'rect-mark)
 
+(setq woman-use-own-frame nil)     ; don't create new frame for manpages
+(setq woman-use-topic-at-point t)  ; don't prompt upon K key (manpage display)
 
 (add-to-list 'load-path "~/opt/lisp/elisp")
 (add-to-list 'load-path "~/opt/lisp/elisp/magit")
 (require 'magit)
-
-(setq viper-mode t)                ; enable Viper at load time
-(require 'viper)                   ; load Viper
-(require 'vimpulse)                ; load Vimpulse
-(require 'rect-mark)
-(setq woman-use-own-frame nil)     ; don't create new frame for manpages
-(setq woman-use-topic-at-point t)  ; don't prompt upon K key (manpage display)
-
 
 (add-to-list 'load-path "~/opt/lisp/clojure-mode")
 (require 'clojure-auto)
@@ -66,7 +66,6 @@
 (require 'swank-clojure-autoload)
 
 (setq ring-bell-function 'ignore)
-
 
 (defun indent-or-expand (arg)
   "Either indent according to mode, or expand the word preceding
