@@ -19,7 +19,7 @@
  '(menu-bar-mode t)
  '(one-buffer-one-frame-mode nil nil (aquamacs-frame-setup))
  '(special-display-function (quote special-display-popup-frame))
- '(swank-clojure-extra-vm-args (list "-server"))
+ '(swank-clojure-extra-vm-args (list "-server" "-Djava.security.manager" "-Djava.security.policy=file:///Users/oranenj/.emacs.policy"))
  '(swank-clojure-jar-path "/Users/oranenj/opt/lisp/clojure/clojure.jar")
  '(text-mode-hook nil)
  '(tool-bar-mode t)
@@ -44,19 +44,13 @@
  '(mode-line ((t (:foreground "black" :background "light slate gray"))))
  '(tool-bar ((((type x w32 mac) (class color)) (:background "midnight blue" :foreground "wheat" :box (:line-width 1 :style released-button))))))
 
-(require 'viper)                   ; load Viper
-(require 'vimpulse)                ; load Vimpulse
-(require 'rect-mark)
-
-(setq woman-use-own-frame nil)     ; don't create new frame for manpages
-(setq woman-use-topic-at-point t)  ; don't prompt upon K key (manpage display)
 
 (add-to-list 'load-path "~/opt/lisp/elisp")
 (add-to-list 'load-path "~/opt/lisp/elisp/magit")
 (require 'magit)
 
 (add-to-list 'load-path "~/opt/lisp/clojure-mode")
-(require 'clojure-auto)
+(require 'clojure-mode)
 
 (add-to-list 'load-path "~/opt/lisp/slime")
 (require 'slime)
@@ -66,6 +60,16 @@
 (require 'swank-clojure-autoload)
 
 (setq ring-bell-function 'ignore)
+
+(when (featurep 'aquamacs)         ; redundant I guess, but serves as documentation
+    (raise-frame))                 ; HACK for viper
+(require 'viper)                   ; load Viper
+
+(require 'vimpulse)                ; load Vimpulse
+(require 'rect-mark)
+
+(setq woman-use-own-frame nil)     ; don't create new frame for manpages
+(setq woman-use-topic-at-point t)  ; don't prompt upon K key (manpage display)
 
 (defun indent-or-expand (arg)
   "Either indent according to mode, or expand the word preceding
