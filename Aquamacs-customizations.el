@@ -19,7 +19,7 @@
  '(menu-bar-mode t)
  '(one-buffer-one-frame-mode nil nil (aquamacs-frame-setup))
  '(special-display-function (quote special-display-popup-frame))
- '(swank-clojure-extra-vm-args (list "-server"))
+ '(swank-clojure-extra-vm-args (list "-server" "-Djava.security.manager" "-Djava.security.policy=file:///Users/oranenj/.emacs.policy"))
  '(swank-clojure-jar-path "/Users/oranenj/opt/lisp/clojure/clojure.jar")
  '(text-mode-hook nil)
  '(tool-bar-mode t)
@@ -50,7 +50,7 @@
 (require 'magit)
 
 (add-to-list 'load-path "~/opt/lisp/clojure-mode")
-(require 'clojure-auto)
+(require 'clojure-mode)
 
 (add-to-list 'load-path "~/opt/lisp/slime")
 (require 'slime)
@@ -61,7 +61,10 @@
 
 (setq ring-bell-function 'ignore)
 
+(when (featurep 'aquamacs)         ; redundant I guess, but serves as documentation
+    (raise-frame))                 ; HACK for viper
 (require 'viper)                   ; load Viper
+
 (require 'vimpulse)                ; load Vimpulse
 (require 'rect-mark)
 
