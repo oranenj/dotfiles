@@ -8,19 +8,19 @@
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
  '(aquamacs-additional-fontsets nil t)
- '(aquamacs-customization-version-id 151 t)
+ '(aquamacs-customization-version-id 162 t)
  '(current-language-environment "UTF-8")
- '(default-frame-alist (quote ((menu-bar-lines . 1) (font . "fontset-monaco12") (foreground-color . "wheat") (background-color . "black") (cursor-type . box) (cursor-color . "Red") (vertical-scroll-bars . right) (tool-bar-lines . 1) (left-fringe . 1) (right-fringe) (fringe))))
+ '(default-frame-alist (quote ((cursor-type . box) (vertical-scroll-bars . right) (modeline . t) (viper-vi-state-cursor-color . "Red") (fringe) (viper-saved-cursor-color-in-replace-mode . "black") (background-mode . dark) (tool-bar-lines . 1) (menu-bar-lines . 1) (right-fringe . 12) (left-fringe . 4) (border-color . "black") (cursor-color . "Red") (mouse-color . "black") (background-color . "black") (foreground-color . "wheat") (font . "-apple-monaco-medium-r-normal--14-140-72-72-m-140-iso10646-1"))))
  '(display-time-mode t)
  '(emulate-mac-finnish-keyboard-mode t)
  '(indent-tabs-mode nil)
  '(inhibit-startup-screen t)
  '(initial-major-mode (lambda nil (funcall (quote text-mode)) (set-viper-state-in-major-mode)))
  '(menu-bar-mode t)
- '(one-buffer-one-frame-mode nil nil (aquamacs-frame-setup))
  '(special-display-function (quote special-display-popup-frame))
  '(swank-clojure-extra-vm-args (list "-server" "-Djava.security.manager" "-Djava.security.policy=file:///Users/oranenj/.emacs.policy"))
  '(swank-clojure-jar-path "/Users/oranenj/opt/lisp/clojure/clojure.jar")
+ '(tabbar-mode nil nil (tabbar))
  '(text-mode-hook nil)
  '(tool-bar-mode t)
  '(transient-mark-mode t)
@@ -33,6 +33,7 @@
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
  '(default ((t (:stipple nil :background "black" :foreground "wheat" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 150 :width normal :family "apple-monaco"))))
+ '(clojure-mode-default ((t (:inherit autoface-default :slant normal :weight normal :height 140 :family "monaco"))) t)
  '(flyspell-duplicate ((t (:foreground "Gold3" :underline t :weight normal))))
  '(flyspell-incorrect ((t (:foreground "OrangeRed" :underline t :weight normal))))
  '(font-lock-comment-face ((t (:foreground "SteelBlue1"))))
