@@ -10,7 +10,7 @@
  '(aquamacs-additional-fontsets nil t)
  '(aquamacs-customization-version-id 162 t)
  '(current-language-environment "UTF-8")
- '(default-frame-alist (quote ((cursor-type . box) (vertical-scroll-bars . right) (modeline . t) (viper-vi-state-cursor-color . "Red") (fringe) (viper-saved-cursor-color-in-replace-mode . "black") (background-mode . dark) (tool-bar-lines . 1) (menu-bar-lines . 1) (right-fringe . 12) (left-fringe . 4) (border-color . "black") (cursor-color . "Red") (mouse-color . "black") (background-color . "black") (foreground-color . "wheat") (font . "-apple-monaco-medium-r-normal--14-140-72-72-m-140-iso10646-1"))))
+ '(default-frame-alist (quote ((tool-bar-lines . 1) (cursor-type . box) (vertical-scroll-bars . right) (modeline . t) (viper-vi-state-cursor-color . "Red") (fringe) (viper-saved-cursor-color-in-replace-mode . "black") (background-mode . dark) (menu-bar-lines . 1) (right-fringe . 12) (left-fringe . 4) (border-color . "black") (cursor-color . "Red") (mouse-color . "black") (background-color . "black") (foreground-color . "wheat") (font . "-apple-monaco-medium-r-normal--14-140-72-72-m-140-iso10646-1"))))
  '(display-time-mode t)
  '(emulate-mac-finnish-keyboard-mode t)
  '(indent-tabs-mode nil)
@@ -56,6 +56,10 @@
 (add-to-list 'load-path "~/opt/lisp/slime")
 (require 'slime)
 (slime-setup)
+
+(add-to-list 'load-path "~/opt/lisp/slime/contrib")
+(require 'slime-repl)
+(slime-repl-init)
 
 (add-to-list 'load-path "~/opt/lisp/swank-clojure")
 (require 'swank-clojure-autoload)
