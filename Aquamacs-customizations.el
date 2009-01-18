@@ -47,8 +47,9 @@
 
 
 (add-to-list 'load-path "~/opt/lisp/elisp")
-(add-to-list 'load-path "~/opt/lisp/elisp/magit")
-(require 'magit)
+(add-to-list 'load-path "~/opt/lisp/elisp/egg")
+(require 'egg)
+(require 'egg-grep)
 
 (add-to-list 'load-path "~/opt/lisp/clojure-mode")
 (require 'clojure-mode)
