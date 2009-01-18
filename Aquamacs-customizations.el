@@ -47,9 +47,6 @@
 
 
 (add-to-list 'load-path "~/opt/lisp/elisp")
-(add-to-list 'load-path "~/opt/lisp/elisp/egg")
-(require 'egg)
-(require 'egg-grep)
 
 (add-to-list 'load-path "~/opt/lisp/clojure-mode")
 (require 'clojure-mode)
@@ -76,6 +73,10 @@
 
 (setq woman-use-own-frame nil)     ; don't create new frame for manpages
 (setq woman-use-topic-at-point t)  ; don't prompt upon K key (manpage display)
+
+(add-to-list 'load-path "~/opt/lisp/elisp/egg")
+(require 'egg)
+(require 'egg-grep)
 
 (defun indent-or-expand (arg)
   "Either indent according to mode, or expand the word preceding
