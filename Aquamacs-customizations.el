@@ -67,12 +67,11 @@
 (when (featurep 'aquamacs)         ; redundant I guess, but serves as documentation
     (raise-frame))                 ; HACK for viper
 (require 'viper)                   ; load Viper
-
-(require 'vimpulse)                ; load Vimpulse
-(require 'rect-mark)
-
+(require 'viper-in-more-modes)
 (setq woman-use-own-frame nil)     ; don't create new frame for manpages
 (setq woman-use-topic-at-point t)  ; don't prompt upon K key (manpage display)
+(require 'vimpulse)                ; load Vimpulse
+(require 'rect-mark)
 
 (add-to-list 'load-path "~/opt/lisp/elisp/egg")
 (require 'egg)
