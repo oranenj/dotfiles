@@ -14,8 +14,8 @@ man -t "${1}" | ps2pdf - - | open -f -a /Applications/Preview.app/
 }
 
 ff-maint() {
-for f in /Users/oranenj/Library/Application Support/Firefox/Profiles/*/*.sqlite
+for f in /Users/oranenj/Library/Application\ Support/Firefox/Profiles/*/*.sqlite
 do
-  sqlite3 $f 'VACUUM;'
+  sqlite3 "$f" 'VACUUM;'
 done
 }
