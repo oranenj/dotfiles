@@ -1,6 +1,8 @@
 . ~/.bashrc
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH:/usr/local/ada-4.3/bin
 
+export CLOJURE_EXT=~/opt/lisp/ext
+
 if [ -f /opt/local/etc/bash_completion ]; then
   . /opt/local/etc/bash_completion
 fi
