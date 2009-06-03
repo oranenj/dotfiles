@@ -8,6 +8,7 @@
   ;; If there is more than one, they won't work right.
  '(aquamacs-additional-fontsets nil t)
  '(aquamacs-customization-version-id 172 t)
+ '(cua-mode nil nil (cua-base))
  '(default-frame-alist (quote ((tool-bar-lines . 1) (cursor-type . box) (vertical-scroll-bars . right) (modeline . t) (viper-vi-state-cursor-color . "Red") (fringe) (viper-saved-cursor-color-in-replace-mode . "black") (background-mode . dark) (menu-bar-lines . 1) (right-fringe . 12) (left-fringe . 4) (border-color . "black") (cursor-color . "Red") (mouse-color . "black") (background-color . "black") (foreground-color . "wheat") (font . "-apple-monaco-medium-r-normal--14-140-72-72-m-140-iso10646-1"))))
  '(display-time-mode t)
  '(emulate-mac-finnish-keyboard-mode t)
