@@ -7,18 +7,22 @@
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
  '(aquamacs-additional-fontsets nil t)
- '(aquamacs-customization-version-id 172 t)
+ '(aquamacs-customization-version-id 200 t)
+ '(aquamacs-tool-bar-user-customization nil t)
  '(cua-mode nil nil (cua-base))
- '(default-frame-alist (quote ((tool-bar-lines . 1) (cursor-type . box) (vertical-scroll-bars . right) (modeline . t) (viper-vi-state-cursor-color . "Red") (fringe) (viper-saved-cursor-color-in-replace-mode . "black") (background-mode . dark) (menu-bar-lines . 1) (right-fringe . 12) (left-fringe . 4) (border-color . "black") (cursor-color . "Red") (mouse-color . "black") (background-color . "black") (foreground-color . "wheat") (font . "-apple-monaco-medium-r-normal--14-140-72-72-m-140-iso10646-1"))))
+ '(default-frame-alist (quote ((cursor-type . box) (vertical-scroll-bars . right) (modeline . t) (viper-vi-state-cursor-color . "Red") (fringe) (viper-saved-cursor-color-in-replace-mode . "black") (background-mode . dark) (right-fringe . 12) (left-fringe . 4) (border-color . "black") (cursor-color . "Red") (mouse-color . "black") (background-color . "black") (foreground-color . "wheat") (font . "-apple-monaco-medium-r-normal--14-140-72-72-m-140-iso10646-1") (tool-bar-lines . 1) (menu-bar-lines . 1))))
  '(display-time-mode t)
  '(emulate-mac-finnish-keyboard-mode t)
+ '(indent-tabs-mode nil)
  '(initial-major-mode (lambda nil (funcall (quote text-mode)) (set-viper-state-in-major-mode)))
  '(menu-bar-mode t)
+ '(ns-tool-bar-display-mode (quote both) t)
+ '(ns-tool-bar-size-mode (quote regular) t)
  '(special-display-function (quote special-display-popup-frame))
+ '(swank-clojure-binary "/usr/local/bin/clj")
  '(tabbar-mode nil nil (tabbar))
  '(text-mode-hook nil)
- '(tool-bar-mode t)
- '(transient-mark-mode t))
+ '(tool-bar-mode t))
 
 (custom-set-faces
   ;; custom-set-faces was added by Custom.

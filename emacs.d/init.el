@@ -29,8 +29,8 @@
 (setq ring-bell-function 'ignore)
 
 ; Hack for viper
-(when (featurep 'aquamacs)
-  (raise-frame))
+;(when (featurep 'aquamacs)
+;  (raise-frame))
 
 (require 'viper)                   ; load Viper
 (setq woman-use-own-frame nil)     ; don't create new frame for manpages

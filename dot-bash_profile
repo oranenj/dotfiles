@@ -1,6 +1,13 @@
 . ~/.bashrc
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 
+export CLASSPATH=\
+/Users/oranenj/opt/lisp/clojure/src/clj/:\
+/Users/oranenj/opt/lisp/clojure/classes/:\
+/Users/oranenj/opt/lisp/clojure/src/jvm/:\
+/Users/oranenj/opt/lisp/clojure-contrib/src/:\
+/Users/oranenj/opt/lisp/swank-clojure/
+
 export CLOJURE_EXT=~/opt/lisp/ext
 
 function parse_git_branch {
