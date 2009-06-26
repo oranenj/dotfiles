@@ -1,3 +1,0 @@
-; This file is needed mainly for aquamacs
-; to get the settings correctly loaded
-(load "~/.emacs.d/init.el")
